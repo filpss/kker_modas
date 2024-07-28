@@ -1,0 +1,13 @@
+@import url('variables.css');
+
+header {
+    width: 100vw;
+    background: var(--primary-color);
+    font-family: var(--primary-font), sans-serif;
+    display: flex;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+}
