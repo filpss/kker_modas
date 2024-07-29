@@ -2,7 +2,7 @@
 
 require_once 'config.php';
 
-include  BASE_PATH . '/src/views/header.html';
+include_once BASE_PATH . '/src/views/header.php';
 
 // Iniciando sessão
 session_start();

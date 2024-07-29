@@ -1,3 +1,7 @@
+<?php
+    include_once 'head.html';
+?>
+
 <link rel="stylesheet" type="text/css" href="../../public/assets/css/home_header.css" media="screen" />
 
 <header>
