@@ -11,7 +11,7 @@
   <a href="https://angular.dev/"><img src="https://img.shields.io/badge/PHP-8.2-purple.svg?style=flat-square"/></a>
   <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/PostgreSQL-16-blue.svg?style=flat-square"/></a>
   <a href="https://sass-lang.com/"><img src="https://img.shields.io/badge/Docker-26.1.4-cyan.svg?style=flat-square"/></a>
-  <img src="https://img.shields.io/badge/Platforms-Web-purple.svg?style=flat-square"alt="Platforms">
+  <img src="https://img.shields.io/badge/Aplicação Web-purple.svg?style=flat-square"alt="Platforms">
   <br>
   <a href="https://sass-lang.com/"><img src="https://img.shields.io/badge/HTML-red.svg?style=flat-square"/></a>
   <a href="https://sass-lang.com/"><img src="https://img.shields.io/badge/CSS-blue.svg?style=flat-square"/></a>
