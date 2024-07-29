@@ -15,11 +15,13 @@ require_once 'connection.php';
 
 function addUserAtDB($pdo, $nome, $email, $password): void
 {
-    $sql = 'INSERT INTO tb_users (username, email ,password) VALUES (:nome, :email, :descricao)';
+    $sql = 'INSERT INTO tb_users (username, email ,password) VALUES (:nome, :email, :password)';
     $stmt = $pdo->prepare($sql);
 
+    $password_hash = password_hash($password, PASSWORD_DEFAULT);
+
     $stmt->bindParam(':nome', $nome);
-    $stmt->bindParam(':descricao', $password);
+    $stmt->bindParam(':password', $password_hash);
     $stmt->bindParam(':email', $email);
 
     if($stmt->execute()) {
@@ -88,5 +90,5 @@ function removeUserFromDb($pdo, $id): void
 
 //getUserByName($pdo, 'filipe');
 //getUserById($pdo, 4);
-//addUserAtDB($pdo, 'teste3', 'teste3@gmail.com', '12345678910');
+//addUserAtDB($pdo, 'Gabriela', 'gaby@gmail.com', '123456');
 //removeUserFromDb($pdo, 48);
