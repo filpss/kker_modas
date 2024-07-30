@@ -1,5 +1,5 @@
 <?php
-    include_once 'head.html';
+    include_once 'head.php';
 ?>
 
 <link rel="stylesheet" href="../../public/assets/css/login_page.css">
@@ -12,13 +12,13 @@
         </div>
 
         <h2>Faça Login</h2>
-        <form method="get" action="#">
-            <label for="login">Login</label>
-            <input placeholder="Digite seu usuário" type="text" id="login"/>
+        <form method="post" action="../login.php">
+            <label for="username">Login</label>
+            <input placeholder="Digite seu usuário" name="username" type="text" id="username"/>
             <label for="password">Senha</label>
-            <input placeholder="******" type="password" id="password"/>
+            <input placeholder="******" name="password" type="password" id="password"/>
             <div class="btn">
-                <button>Enviar</button>
+                <input class="send_button" type="submit" value="Enviar">
             </div>
             <p class="forgot-password">Esqueceu a senha? <a>Clique aqui!</a></p>
         </form>

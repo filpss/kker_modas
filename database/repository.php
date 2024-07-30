@@ -37,7 +37,36 @@ function getUserById($pdo, $id)
     $stmt = $pdo->prepare($query);
     $stmt->bindParam(':id', $id);
     $stmt->execute();
-    return $user = $stmt->fetch(PDO::FETCH_ASSOC);
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+}
+
+function login($pdo, $username, $password)
+{
+    $query = 'select * from tb_users where username = :username and password = :password';
+    $stmt = $pdo->prepare($query);
+    $stmt->bindParam(':username', $username);
+    $hashed_password = getHashPasswordFromDb($pdo, $username);
+    $password_is_corret = password_verify($password, $hashed_password);
+
+    if($password_is_corret) {
+        $stmt->bindParam(':password', $hashed_password);
+        $stmt->execute();
+        echo 'Usuário consultado';
+    } else {
+        die('Usuário e/ou senha incorretos');
+    }
+
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+}
+
+function getHashPasswordFromDb($pdo, $username)
+{
+    $query = 'select password from tb_users where username = :username';
+    $stmt = $pdo->prepare($query);
+    $stmt->bindParam(':username', $username);
+    $stmt->execute();
+    $hased_password_from_db = $stmt->fetch(PDO::FETCH_ASSOC);
+    return $hased_password_from_db['password'];
 }
 
 function getUserByName ($pdo, $nome): void {
@@ -59,15 +88,17 @@ function removeUserFromDb($pdo, $id): void
 {
     $query = 'delete from tb_users where id = :id';
 
-    if(is_int($id)) {
+    if(is_int($id) && $id != null) {
         $user = getUserById($pdo, $id);
         if($user){
             $stmt = $pdo->prepare($query);
             $stmt->bindParam(':id', $id);
             $stmt->execute();
             echo "Usuário de ID: $id (" . $user['username'] . ') foi removido com sucesso!' . "<br>";
+        } else {
+            echo 'Usuário não existe';
         }
-    } else if(is_array($id)) {
+    } else if(is_array($id) && $id != null) {
         foreach ($id as $unique_id) {
             $user = getUserById($pdo, $unique_id);
             if($user){
@@ -91,4 +122,6 @@ function removeUserFromDb($pdo, $id): void
 //getUserByName($pdo, 'filipe');
 //getUserById($pdo, 4);
 //addUserAtDB($pdo, 'Gabriela', 'gaby@gmail.com', '123456');
-//removeUserFromDb($pdo, 48);
+//removeUserFromDb($pdo, 51);
+//getHashPasswordFromDb($pdo, 'Gabriela');
+login($pdo, 'filipe', '1234');

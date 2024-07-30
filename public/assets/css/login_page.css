@@ -98,7 +98,7 @@ input:-webkit-autofill:active {
 
             padding-top: 8px;
 
-            button {
+            .send_button {
                 background: var(--primary-color);
                 background: #44151f;
                 color: white;
@@ -111,7 +111,7 @@ input:-webkit-autofill:active {
         }
 
         .forgot-password {
-            margin-top: 30px;
+            margin-top: 20px;
         }
 
         p {
@@ -153,6 +153,7 @@ input:-webkit-autofill:active {
 @media (max-width: 620px) {
     .logo-txt {
         justify-content: center !important;
+        padding-bottom: 10px;
     }
 
     .form {
