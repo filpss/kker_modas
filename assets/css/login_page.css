@@ -1,0 +1,179 @@
+@import url('global.css');
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+    box-shadow: 0 0 0 30px white inset !important;
+    -webkit-text-fill-color: #000 !important;
+    caret-color: auto !important;
+}
+
+::-webkit-input-placeholder {
+    color: #d3d3d3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-section {
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+    background: #f7f7f7;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    .logo-txt {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        width: 50%;
+
+        img {
+            height: 35px;
+            width: 35px;
+            border-radius: 8px;
+        }
+    }
+
+    .kker-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .form {
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        background: rgb(255, 255, 255);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        width: 600px;
+        height: 600px;
+
+        h2 {
+            padding: 30px;
+            font-weight: 600;
+            font-size: 30px;
+        }
+
+        input {
+            display: block;
+            height: 40px;
+            width: 300px;
+            font-size: 0.8em;
+            background: none;
+            border: none;
+            border-bottom: 1px black solid;
+            margin-bottom: 30px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .loginErrorMessage {
+            color: red;
+            padding-bottom: 15px;
+            text-align: center;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding-top: 8px;
+
+            button {
+                background: var(--primary-color);
+                background: #44151f;
+                color: white;
+                width: 250px;
+                height: 40px;
+                border: none;
+                border-radius: 20px;
+                cursor: pointer;
+            }
+        }
+
+        .forgot-password {
+            margin-top: 30px;
+        }
+
+        p {
+
+            text-align: center;
+            font-size: 15px;
+
+            a {
+                font-weight: 600;
+                color: rgb(241, 187, 11);
+                text-decoration: none;
+                cursor: pointer;
+
+                &:hover {
+                    color: rgb(218, 173, 13);
+                }
+            }
+        }
+    }
+}
+
+.div-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        height: 600px;
+        width: 600px;
+    }
+}
+
+@media (max-width: 1210px) {
+    .div-img img {
+        display: none;
+    }
+}
+
+@media (max-width: 620px) {
+    .logo-txt {
+        justify-content: center !important;
+    }
+
+    .form {
+        width: 500px !important;
+    }
+}
+
+@media (max-width: 510px) {
+    .form {
+        width: 400px !important;
+    }
+}
+
+@media (max-width: 390px) {
+    .form {
+        width: 370px !important;
+    }
+}
+
+@media (max-width: 375px) {
+    .form {
+        width: 350px !important;
+    }
+}
