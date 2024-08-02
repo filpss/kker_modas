@@ -1,0 +1,21 @@
+{
+    "name": "filip/kker_modas",
+    "description": "projeto de gerenciamento de micronegocios para empresa kker",
+    "type": "project",
+    "autoload": {
+        "files": [
+            "app/config/database/configs.php",
+            "app/config/database/database.php"
+        ],
+        "psr-4": {
+            "ISM\\KkerSystem\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "filpss",
+            "email": "filipepinho2010@hotmail.com"
+        }
+    ],
+    "require": {}
+}
