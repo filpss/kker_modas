@@ -1,10 +1,14 @@
 <?php
 
+require '../vendor/autoload.php';
+
+use ISM\KkerSystem\Database\database;
+
 session_start();
 //$_SESSION['user'] = 'filipe';
 //session_destroy();
 
-$allowed_routes = require_once __DIR__ . '/../config/router/router.php';
+$allowed_routes = require_once __DIR__ . '/../app/config/router/router.php';
 
 $route = $_GET['route'] ?? 'home';
 
@@ -33,6 +37,6 @@ switch($route){
         break;
 }
 
-require_once __DIR__ . '/../views/head.php';
-require_once __DIR__ . "/../views/pages/$page";
-require_once __DIR__ . '/../views/footer.php';
+require_once __DIR__ . '/../app/views/head.php';
+require_once __DIR__ . "/../app/views/pages/$page";
+require_once __DIR__ . '/../app/views/footer.php';
