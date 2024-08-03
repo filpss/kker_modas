@@ -8,7 +8,8 @@
             "app/config/database/database.php"
         ],
         "psr-4": {
-            "ISM\\KkerSystem\\": "app/"
+            "ISM\\KkerSystem\\": "app/",
+            "ISM\\KkerSystem\\Database\\": "app/config/database"
         }
     },
     "authors": [
@@ -17,5 +18,7 @@
             "email": "filipepinho2010@hotmail.com"
         }
     ],
-    "require": {}
+    "require": {
+      "ext-pdo": "*"
+    }
 }

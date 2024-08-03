@@ -2,11 +2,11 @@
     include_once __DIR__ . '/../head.php';
     ?>
 
-<link rel="stylesheet" href="../assets/css/login_page.css">
+<link rel="stylesheet" href="../app/assets/css/login_page.css">
 <section class="form-section">
     <div class="form">
         <div class="logo-txt">
-            <img class="img-login-page" src="../assets/img/mini-logo-kker.svg" alt="Logomarca da empresa KKER">
+            <img class="img-login-page" src="../app/assets/img/mini-logo-kker.svg" alt="Logomarca da empresa KKER">
             <p>KK&R</p>
         </div>
 
@@ -24,6 +24,6 @@
     </div>
 
     <div class="div-img">
-        <img src="../assets/img/logo_kker.svg" alt="Foto grande com a logo">
+        <img src="../app/assets/img/logo_kker.svg" alt="Foto grande com a logo">
     </div>
 </section>
