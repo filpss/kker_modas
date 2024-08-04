@@ -5,7 +5,7 @@ namespace ISM\KkerSystem\Database;
 use PDO;
 use PDOException;
 
-class database
+class Database
 {
     function query($query, $params=[]): array
     {
@@ -16,7 +16,7 @@ class database
             );
             $stmt = $pdo->prepare($query);
             $stmt->execute($params);
-            $result = $stmt->fetchAll(PDO::FETCH_COLUMN);
+            $result = $stmt->fetchAll(PDO::FETCH_OBJ);
             return [
                 'status' => 'success',
                 'data' => $result

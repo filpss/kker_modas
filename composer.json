@@ -4,12 +4,11 @@
     "type": "project",
     "autoload": {
         "files": [
-            "app/config/database/configs.php",
-            "app/config/database/database.php"
+            "app/config/database/configs.php"
         ],
         "psr-4": {
             "ISM\\KkerSystem\\": "app/",
-            "ISM\\KkerSystem\\Database\\": "app/config/database"
+            "ISM\\KkerSystem\\Database\\": "app/config/database/"
         }
     },
     "authors": [

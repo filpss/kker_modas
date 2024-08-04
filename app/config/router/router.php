@@ -4,5 +4,6 @@ return [
     '404',
     'header',
     'home',
-    'login'
+    'login',
+    'login_submit'
 ];
