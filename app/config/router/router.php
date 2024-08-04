@@ -5,5 +5,6 @@ return [
     'header',
     'home',
     'login',
-    'login_submit'
+    'login_submit',
+    'loggout'
 ];

@@ -1,5 +1,8 @@
 <?php
 include_once __DIR__ . '/../head.php';
+
+$error = $_SESSION['error'] ?? null;
+unset($_SESSION['error']);
 ?>
 
 <link rel="stylesheet" href="../app/assets/css/login_page.css">
@@ -19,6 +22,13 @@ include_once __DIR__ . '/../head.php';
             <div class="btn">
                 <button>Enviar</button>
             </div>
+            <?php if(!empty($error)): ?>
+            <div>
+                <p style="color: red; margin-top:30px;">
+                    <?= $error ?>
+                </p>
+            </div>
+            <?php endif;?>
             <p class="forgot-password">Esqueceu a senha? <a>Clique aqui!</a></p>
         </form>
     </div>

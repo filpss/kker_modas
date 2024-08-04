@@ -85,7 +85,7 @@ input:-webkit-autofill:active {
             }
         }
 
-        .loginErrorMessage {
+        .login-Error-Message {
             color: red;
             padding-bottom: 15px;
             text-align: center;

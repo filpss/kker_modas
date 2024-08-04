@@ -18,7 +18,7 @@ if(empty($username) || empty($password)){
 $database = new database();
 $sql = 'select * from tb_users where username = :username';
 $params = [
-    ':username' => $username
+    ':username' => strtolower($username)
 ];
 $result = $database->query($sql, $params);
 
@@ -41,11 +41,3 @@ if(!password_verify($password, $result['data'][0]->password)){
 
 $_SESSION['user'] = $result['data'][0]->username;
 header('Location: ../public/index.php?route=home');
-
-//echo '<pre>';
-//var_dump($result);
-//echo '</pre>';
-
-//if($result['status'])
-
-//echo $result['data'][0]->username;

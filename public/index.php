@@ -36,6 +36,9 @@ switch($route){
     case 'login_submit':
         $page = 'login_submit.php';
         break;
+    case 'loggout':
+        $page = '../../helpers/loggout.php';
+        break;
 }
 
 require_once __DIR__ . '/../app/config/database/configs.php';

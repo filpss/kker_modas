@@ -10,7 +10,7 @@ header {
     width: 100%;
     background: var(--primary-color);
     font-family: var(--primary-font), sans-serif;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
     color: var(--primary-font-color);
 }
 
@@ -19,7 +19,7 @@ section {
 }
 
 .logo-header {
-    /*border-radius: 50%;*/
+    border-radius: 50%;
     width: 50px;
     height: 50px;
 }
@@ -36,4 +36,22 @@ section {
     align-items: center;
     justify-content: end;
     gap: 10px;
+}
+
+.img-user {
+    width: 50px;
+    margin-left: 15px;
+}
+
+.loggout {
+    margin-left: 15px;
+    text-decoration: none;
+    color: white;
+    transition: color 0.4s ease, transform 0.1s ease;
+    padding: 12px;
+}
+
+.loggout:hover {
+    color: #f49910;
+    transform: scale(1.1);
 }
