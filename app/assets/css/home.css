@@ -1,0 +1,111 @@
+body {
+    height: 100vh;
+    background: #f7f7f7;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.kkersystem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 60px auto 40px;
+
+}
+
+.img_kkersystem {
+    width: 270px;
+    padding: 15px;
+}
+
+h3 {
+    font-family: var(--primary-font), sans-serif;
+    padding: 15px;
+    font-weight: 400;
+    margin: 20px 0;
+}
+
+.buttons_div {
+    display: grid;
+    grid-template-columns: repeat(3, .3fr);
+    gap: 50px;
+    justify-content: center;
+    width: 90%;
+    margin-bottom: 80px;
+}
+
+.card {
+    background: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    border-radius: 8px;
+    height: 140px;
+    width: 240px;
+    transition: background-color 0.4s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.card:hover {
+    background: #eaeaea;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.icon_div {
+    background: var(--primary-color);
+    height: 90px;
+    width: 90px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: -50px;
+}
+
+.img_cadastro {
+    width: 65px;
+}
+
+.img_estoque {
+    width: 45px;
+}
+
+.img_relatorio {
+    width: 45px;
+}
+
+.img_breve {
+    width: 45px;
+}
+
+.text {
+    font-family: var(--primary-font), sans-serif;
+    margin-left: -15%;
+    margin-bottom: 10%;
+    h2 {
+        color: #656565;
+    }
+
+    p {
+        color: #8F8F8F;
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: var(--primary-font), sans-serif;
+    color: #8F8F8F;
+}
