@@ -34,7 +34,7 @@ switch($route){
         $page = 'login_page.php';
         break;
     case 'login_submit':
-        $page = 'login_submit.php';
+        $page = '../../helpers/login_submit.php';
         break;
     case 'loggout':
         $page = '../../helpers/loggout.php';

@@ -6,6 +6,7 @@ unset($_SESSION['error']);
 ?>
 
 <link rel="stylesheet" href="../app/assets/css/login_page.css">
+<title>Login</title>
 <section class="form-section">
     <div class="form">
         <div class="logo-txt">

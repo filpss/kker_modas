@@ -25,12 +25,10 @@ section {
 }
 
 .logo {
-    padding: 0 0 0 10px;
     width: 50%;
 }
 
 .user {
-    padding: 0 10px 0 0;
     width: 50%;
     display: flex;
     align-items: center;
