@@ -1,5 +1,5 @@
 <?php
-include_once __DIR__ . '/../views/head.php';
+include_once __DIR__ . '/header.php';
 ?>
 
 <link rel="stylesheet" type="text/css" href="/kker_modas/app/assets/css/home_header.css" media="screen" />

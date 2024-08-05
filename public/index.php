@@ -3,8 +3,20 @@
 require '../vendor/autoload.php';
 
 session_start();
-//$_SESSION['user'] = 'filipe';
-//session_destroy();
+$expiration_time = 1800;
+if (isset($_SESSION['user'])) {
+    if (!isset($_SESSION['expiration_time'])) {
+        $_SESSION['expiration_time'] = time() + $expiration_time;
+    } elseif (time() > $_SESSION['expiration_time']) {
+        session_unset();
+        session_destroy();
+        echo json_encode(['session_expired' => true]);
+        exit;
+    }
+    $session_up = true;
+} else {
+    $session_up = false;
+}
 
 $allowed_routes = require_once __DIR__ . '/../app/config/router/router.php';
 
@@ -44,6 +56,29 @@ switch($route){
 require_once __DIR__ . '/../app/config/database/configs.php';
 require_once __DIR__ . '/../app/config/database/Database.php';
 
-require_once __DIR__ . '/../app/views/head.php';
+require_once __DIR__ . '/../app/views/templates/head.php';
 require_once __DIR__ . "/../app/views/pages/$page";
-require_once __DIR__ . '/../app/views/footer.php';
+?>
+
+<script>
+    $(document).ready(function(){
+        let session_up = <?php echo json_encode($session_up); ?>;
+        if(session_up) {
+            setInterval(function () {
+                $.ajax({
+                    url: window.location.href,
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function(data) {
+                        if (data.session_expired) {
+                            window.location.href = "?route=login";
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        console.error('Erro:', error);
+                    }
+                });
+            }, 30 * 60 * 1000)
+        }
+    });
+</script>

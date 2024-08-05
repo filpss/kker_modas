@@ -1,5 +1,5 @@
 <?php
-include_once __DIR__ . '/../head.php';
+include_once __DIR__ . '/../templates/head.php';
 
 $error = $_SESSION['error'] ?? null;
 unset($_SESSION['error']);
@@ -30,10 +30,9 @@ unset($_SESSION['error']);
                 </p>
             </div>
             <?php endif;?>
-            <p class="forgot-password">Esqueceu a senha? <a>Clique aqui!</a></p>
+<!--            <p class="forgot-password">Esqueceu a senha? <a>Clique aqui!</a></p>-->
         </form>
     </div>
-
     <div class="div-img">
         <img src="../app/assets/img/logo_kker.svg" alt="Foto grande com a logo">
     </div>

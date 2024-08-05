@@ -1,14 +1,23 @@
 body {
+    margin: 0;
+    padding: 0;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background: #f7f7f7;
 }
 
-main {
+.main_div {
+    max-width: 1080px;
     display: flex;
     align-items: center;
+    margin-top: 20%;
     justify-content: center;
     flex-direction: column;
     height: 100%;
+    width: 100%;
 }
 
 .kkersystem {
@@ -16,8 +25,7 @@ main {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: 60px auto 40px;
-
+    margin: 0 auto 40px;
 }
 
 .img_kkersystem {
@@ -51,7 +59,7 @@ h3 {
     border-radius: 8px;
     height: 140px;
     width: 240px;
-    transition: background-color 0.4s ease, box-shadow 0.3s ease;
+    transition: background-color 0.4s ease, box-shadow 0.3s ease, transform 0.1s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }
@@ -59,6 +67,7 @@ h3 {
 .card:hover {
     background: #eaeaea;
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
 }
 
 .icon_div {
@@ -102,10 +111,34 @@ h3 {
     }
 }
 
-footer {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-family: var(--primary-font), sans-serif;
-    color: #8F8F8F;
+a {
+    text-decoration: none;
+}
+
+.text-footer {
+    margin-bottom: 10%;
+}
+
+@media (max-width: 900px) {
+    .buttons_div {
+        grid-template-columns: repeat(2, .3fr);
+    }
+
+    h3 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 615px) {
+    .buttons_div {
+        grid-template-columns: repeat(1, .3fr);
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    .soon {
+        display: none;
+    }
 }
