@@ -1,11 +1,12 @@
 <p align="center">
-  <img align="center" alt="Lipe-Node" height="60" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"/>
-  <img align="center" alt="Lipe-Node" height="60" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"/>
-  <img align="center" alt="Lipe-Node" height="60" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"/>
+  <img align="center" alt="Lipe-Node" height="50" width="50" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"/> &nbsp;
+  <img align="center" alt="Lipe-Node" height="50" width="50" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"/> &nbsp;
+  <img align="center" alt="Lipe-Node" height="50" width="50" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"/> &nbsp;
+  <img align="center" alt="Lipe-Node" height="50" width="50" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/jquery/jquery-original.svg"/> &nbsp;
   <br>
-  <img align="center" alt="Lipe-Node" height="70" width="70" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg"/>
-  <img align="center" alt="Lipe-Node" height="70" width="70" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg"/>
-  <img align="center" alt="Lipe-Node" height="70" width="70" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg"/>
+  <img align="center" alt="Lipe-Node" height="70" width="70" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg"/> &nbsp;
+  <img align="center" alt="Lipe-Node" height="50" width="50" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg"/> &nbsp;
+  <img align="center" alt="Lipe-Node" height="70" width="70" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg"/> &nbsp;
 </p>
 <p align="center">
   <a href="https://angular.dev/"><img src="https://img.shields.io/badge/PHP-8.2-7478B2.svg?style=flat-square"/></a>
